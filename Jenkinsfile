@@ -35,6 +35,8 @@ pipeline {
                 echo '🚀 Kubernetes- Deploy ...'
                 sh 'kubectl apply -f k8s/deployment.yaml'
                 sh 'kubectl apply -f k8s/service.yaml'
+                sh 'kubectl rollout restart deployment demo-app'
+                sh 'kubectl rollout status deployment demo-app'
             }
         }
 
