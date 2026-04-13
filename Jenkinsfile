@@ -20,7 +20,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo '🐳 Docker Image Building...'
-                sh 'docker build -t demo-app:${IMAGE_TAG} .'
+                sh 'docker build -t ${IMAGE_TAG} .'
             }
         }
 
