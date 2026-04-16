@@ -28,7 +28,6 @@ pipeline {
         stage('Load Image to Minikube') {
             steps {
                 echo '📦 Minikube- Image ...'
-                sh 'minikube ssh "docker rmi demo-app:latest --force || true"'
                 sh 'minikube image load demo-app:latest --profile minikube'
             }
         }
