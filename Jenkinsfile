@@ -3,8 +3,8 @@ pipeline {
     agent any
 
     environment {
-        MINIKUBE_HOME = "/${env.USER}/.minikube"
-        KUBECONFIG = "/${env.USER}/.kube/config"
+        MINIKUBE_HOME = "/var/lib/jenkins"
+        KUBECONFIG = "/var/lib/jenkins/.kube/config"
         IMAGE_TAG = "demo-app:latest"
     }
 
